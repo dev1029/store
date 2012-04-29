@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120429075843) do
+ActiveRecord::Schema.define(:version => 20120429080649) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -31,5 +31,14 @@ ActiveRecord::Schema.define(:version => 20120429075843) do
   end
 
   add_index "items", ["category_id"], :name => "index_items_on_category_id"
+
+  create_table "properties", :force => true do |t|
+    t.text     "text"
+    t.integer  "item_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "properties", ["item_id"], :name => "index_properties_on_item_id"
 
 end

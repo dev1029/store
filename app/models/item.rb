@@ -6,4 +6,6 @@ class Item < ActiveRecord::Base
   validates_presence_of :category
   validates_presence_of :model
   validates_presence_of :vendor
+
+  has_many :properties, :dependent => :destroy
 end
