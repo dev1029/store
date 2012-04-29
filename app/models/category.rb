@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class Category < ActiveRecord::Base
   attr_accessible :title
 
@@ -10,6 +8,6 @@ class Category < ActiveRecord::Base
   has_ancestry
 
   def self.root
-    find_or_create_by_title 'Каталог'
+    find_or_create_by_title I18n.t('catalog_name')
   end
 end
