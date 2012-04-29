@@ -3,8 +3,7 @@ class Property < ActiveRecord::Base
 
   belongs_to :item
 
-  validates_presence_of :item
-  validates_presence_of :text
+  validates_presence_of :item, :text
 
   alias_attribute :to_s, :text
 end

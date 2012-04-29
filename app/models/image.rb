@@ -3,8 +3,7 @@ class Image < ActiveRecord::Base
 
   belongs_to :item
 
-  validates_presence_of :file
-  validates_presence_of :item
+  validates_presence_of :file, :item
 
   validates_property :format, :of => :file, :in => [:jpeg, :jpg, :png]
 
