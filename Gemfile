@@ -8,6 +8,7 @@ end
 
 group :default do
   gem 'ancestry'
+  gem 'hirb'
   gem 'jquery-rails'
   gem 'rails'
   gem 'therubyracer'

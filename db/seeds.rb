@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Category.destroy_all
+
+Category.root.tap do |catalog|
+  catalog.children.create(:title => 'Computers').tap do |computers|
+
+    computers.children.create(:title => 'Notebooks').tap do |notebooks|
+      notebooks.items.create(:vendor => 'HP', :model => 'PAVILION dv6-6c51er').tap do |notebook|
+        ['Processor Core i5', 'RAM 4Gb', 'HDD 500 Gb'].each do |text|
+          notebook.properties.create :text => text
+        end
+      end
+    end
+
+    computers.children.create(:title => 'Netbooks').tap do |netbooks|
+      netbooks.items.create(:vendor => 'Asus', :model => 'Eee PC 1225B').tap do |netbook|
+        ['Processor E-450', 'RAM 2Gb', 'HDD 320 Gb'].each do |text|
+          netbook.properties.create :text => text
+        end
+      end
+    end
+  end
+end
