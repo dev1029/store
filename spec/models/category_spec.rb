@@ -21,4 +21,11 @@ describe Category do
       }
     end
   end
+
+  describe 'should have ancestor' do
+    let(:category) { Fabricate :category, :parent => Category.root }
+
+    specify { category.parent.should == Category.root }
+    specify { Category.root.children.should == [category] }
+  end
 end

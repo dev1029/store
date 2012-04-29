@@ -7,6 +7,8 @@ class Category < ActiveRecord::Base
 
   has_many :items, :dependent => :destroy
 
+  has_ancestry
+
   def self.root
     find_or_create_by_title 'Каталог'
   end

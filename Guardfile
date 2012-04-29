@@ -19,5 +19,7 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, :rspec_env => { 'RAIL
   watch(%r{^config/environments/.+\.rb$})
   watch(%r{^config/initializers/.+\.rb$})
 
+  watch('db/schema.rb')
+
   watch('spec/spec_helper.rb') { :rspec }
 end
