@@ -7,6 +7,7 @@ class Item < ActiveRecord::Base
 
   has_many :images, :dependent => :destroy
   has_many :properties, :dependent => :destroy
+  has_many :purchases
 
   def to_s
     "#{vendor} #{model}"

@@ -8,4 +8,8 @@
     %li= property
 
 %div
+  = semantic_form_for [@item.category, @item, @purchase] do |form|
+    = form.actions
+
+%div
   = link_to 'Back', @item.category

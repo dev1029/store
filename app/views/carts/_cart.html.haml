@@ -1,0 +1,5 @@
+%ul
+  - cart.purchases.each do |purchase|
+    %li
+      = link_to purchase.item, [purchase.item.category, purchase.item]
+      = link_to 'x', purchase, :method => :delete

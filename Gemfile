@@ -9,6 +9,7 @@ end
 group :default do
   gem 'ancestry'
   gem 'dragonfly'
+  gem 'formtastic'
   gem 'haml-rails'
   gem 'hirb'
   gem 'inherited_resources'
