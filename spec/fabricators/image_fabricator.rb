@@ -1,3 +1,3 @@
 Fabricator(:image) do
-  item nil
+  item!
 end

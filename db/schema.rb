@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120429091750) do
+ActiveRecord::Schema.define(:version => 20120429095636) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20120429091750) do
     t.integer  "item_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "file_uid"
+    t.string   "file_name"
   end
 
   add_index "images", ["item_id"], :name => "index_images_on_item_id"

@@ -8,6 +8,8 @@ Category.root.tap do |catalog|
         ['Processor Core i5', 'RAM 4Gb', 'HDD 500 Gb'].each do |text|
           notebook.properties.create :text => text
         end
+
+        notebook.images.create! :file => File.open("#{Rails.root}/spec/fixtures/hp.jpg")
       end
     end
 
@@ -16,6 +18,8 @@ Category.root.tap do |catalog|
         ['Processor E-450', 'RAM 2Gb', 'HDD 320 Gb'].each do |text|
           netbook.properties.create :text => text
         end
+
+        netbook.images.create! :file => File.open("#{Rails.root}/spec/fixtures/asus.jpg")
       end
     end
   end

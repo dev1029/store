@@ -8,9 +8,11 @@ end
 
 group :default do
   gem 'ancestry'
+  gem 'dragonfly'
   gem 'hirb'
   gem 'jquery-rails'
   gem 'rails'
+  gem 'russian'
   gem 'therubyracer'
 end
 
