@@ -3,8 +3,10 @@ require 'spec_helper'
 describe Category do
   subject { Fabricate :category }
 
-  it { should validate_presence_of :title }
-  it { should validate_uniqueness_of :title }
+  it { should validate_presence_of(:title) }
+  it { should validate_uniqueness_of(:title) }
+
+  it { should have_many(:items).dependent(:destroy) }
 
   context '#self.root' do
     describe 'should create category' do
