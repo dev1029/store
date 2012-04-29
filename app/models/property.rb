@@ -5,4 +5,6 @@ class Property < ActiveRecord::Base
 
   validates_presence_of :item
   validates_presence_of :text
+
+  alias_attribute :to_s, :text
 end

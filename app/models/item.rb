@@ -8,4 +8,8 @@ class Item < ActiveRecord::Base
   validates_presence_of :vendor
 
   has_many :properties, :dependent => :destroy
+
+  def to_s
+    "#{vendor} #{model}"
+  end
 end
