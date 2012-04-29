@@ -13,4 +13,15 @@ class Item < ActiveRecord::Base
   def to_s
     "#{vendor} #{model}"
   end
+
+  def image
+    first_image_file
+  end
+
+  private
+    def first_image
+      images.first
+    end
+
+    delegate :file, :to => :first_image, :allow_nil => true, :prefix => true
 end

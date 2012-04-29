@@ -1,0 +1,11 @@
+%h1= @item
+
+%div
+  = image_tag @item.image.url if @item.image
+
+%ul
+  - @item.properties.each do |property|
+    %li= property
+
+%div
+  = link_to 'Back', @item.category

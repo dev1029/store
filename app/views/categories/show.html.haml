@@ -1,0 +1,12 @@
+%h1= @category
+
+%ul
+  - @category.children.each do |category|
+    %li= link_to category, category
+
+%ul
+  - @category.items.each do |item|
+    %li= link_to item, [@category, item]
+
+%div
+  = link_to 'Back', @category.parent == Category.root ? [:categories] : @category.parent

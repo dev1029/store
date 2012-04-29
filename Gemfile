@@ -9,7 +9,9 @@ end
 group :default do
   gem 'ancestry'
   gem 'dragonfly'
+  gem 'haml-rails'
   gem 'hirb'
+  gem 'inherited_resources'
   gem 'jquery-rails'
   gem 'rails'
   gem 'russian'
