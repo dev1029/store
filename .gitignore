@@ -1,7 +1,10 @@
 /.bundle
 /bin
 /config/database.yml
+/config/sunspot.yml
 /db/*.sqlite3
-/log/*.log
+/log/*log*
 /public/system
+/solr/data
+/solr/pids
 /tmp

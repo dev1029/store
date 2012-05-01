@@ -7,6 +7,7 @@ Store::Application.routes.draw do
     end
   end
 
+  resources :items, :only => [:index]
   resources :orders, :only => :create
   resources :purchases, :only => :destroy
 

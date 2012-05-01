@@ -3,6 +3,8 @@ class InheritedResourcesController < ApplicationController
 
   before_filter :find_or_create_cart, :store_cart_id_to_session
 
+  has_searcher
+
   helper_method :cart
 
   protected

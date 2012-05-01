@@ -11,12 +11,19 @@ group :default do
   gem 'dragonfly'
   gem 'formtastic'
   gem 'haml-rails'
-  gem 'hirb'
+  gem 'has_searcher'
   gem 'inherited_resources'
   gem 'jquery-rails'
+  gem 'kaminari'
   gem 'rails'
   gem 'russian'
+  gem 'sunspot_rails'
   gem 'therubyracer'
+end
+
+group :development do
+  gem 'hirb'
+  gem 'sunspot_solr'
 end
 
 group :test do
@@ -29,5 +36,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'spork'
   gem 'sqlite3'
+  gem 'sunspot_matchers'
 end
 

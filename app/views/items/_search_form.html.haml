@@ -1,0 +1,4 @@
+%div
+  = semantic_search_form_for :item, :url => [:items] do |form|
+    = form.input :keywords, :as => :string
+    = form.actions
