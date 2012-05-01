@@ -64,6 +64,8 @@
         <tokenizer class="solr.StandardTokenizerFactory"/>
         <filter class="solr.StandardFilterFactory"/>
         <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.PorterStemFilterFactory"/>
+        <filter class="solr.EdgeNGramFilterFactory" minGramSize="3" maxGramSize="15" side="front"/>
       </analyzer>
     </fieldType>
     <!-- *** This fieldType is used by Sunspot! *** -->
