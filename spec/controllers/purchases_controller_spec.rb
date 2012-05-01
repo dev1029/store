@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe PurchasesController do
-  describe 'should set cart_id on create' do
+  describe 'should set cart on create' do
     let(:item) { Fabricate :item }
 
     before { post :create, :category_id => item.category.id, :item_id => item.id }
