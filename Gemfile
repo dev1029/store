@@ -24,6 +24,7 @@ end
 group :development do
   gem 'hirb'
   gem 'sunspot_solr'
+  gem 'yandex_market_parser', :git => 'git://github.com/dev1029/parser.git'
 end
 
 group :test do
