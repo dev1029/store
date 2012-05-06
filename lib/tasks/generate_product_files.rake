@@ -12,4 +12,3 @@ task :generate_product_files => :environment do
     end
   end
 end
-
