@@ -1,13 +1,14 @@
 desc 'generate files with products from category'
 task :generate_product_files => :environment do
-  ids = ENV['id'].split(',')
+  file = ENV['file']
+  categories = ENV['categories'].split(',')
 
-  price = Price.new("#{Rails.root}/price/price.xml")
+  price = Price.new(file)
 
-  ids.each do |id|
-    File.open(id, 'w') do |file|
-      price.offers(id.to_i).each do |offer|
-        file.puts offer 
+  categories.each do |category|
+    File.open(category, 'w') do |f|
+      price.offers(category.to_i).each do |offer|
+        f.puts offer 
       end
     end
   end

@@ -5,9 +5,12 @@ class Price
     self.xml_path = xml_path
   end
 
+  #
+  # название|category_id|offer_id|цена|производитель|модель|ссылка_на_яндекс_маркет
+  #
   def offers(*category_ids)
     offers_with_positive_price(category_ids).map { |offer|
-      "#{offer.name}|#{offer.category_id}|#{offer.price * yandex_market_price.exchange_rate}|" 
+      "#{offer.name}|#{offer.category_id}|#{offer.id}|#{offer.price * yandex_market_price.exchange_rate}|" 
     }
   end
 
