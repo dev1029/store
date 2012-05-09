@@ -1,6 +1,6 @@
 = semantic_search_form_for :item, :url => [:items] do |form|
   = form.inputs do
-    = form.input :keywords, :as => :string, :label => false
+    = form.input :keywords, :as => :string, :label => false, :placeholder => t('enter_keywords') 
 
   = form.actions do
     = form.action :submit, :label => t('find')

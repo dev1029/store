@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120509114054) do
+ActiveRecord::Schema.define(:version => 20120509155657) do
 
   create_table "carts", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20120509114054) do
     t.string   "price_category_id"
     t.string   "price_description"
     t.string   "price_offer_id"
+    t.float    "price"
   end
 
   add_index "items", ["category_id"], :name => "index_items_on_category_id"

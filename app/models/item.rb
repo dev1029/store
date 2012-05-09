@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  attr_accessible :model, :vendor, :price_category_id, :price_description, :price_offer_id
+  attr_accessible :model, :vendor, :price, :price_category_id, :price_description, :price_offer_id
 
   belongs_to :category
 
@@ -25,6 +25,10 @@ class Item < ActiveRecord::Base
 
   def image
     first_image_file
+  end
+
+  def ceiled_price
+    price.ceil
   end
 
   private
