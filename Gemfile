@@ -1,6 +1,7 @@
 source :rubygems
 
 group :assets do
+  gem 'compass-rails'
   gem 'coffee-rails'
   gem 'sass-rails'
   gem 'uglifier'

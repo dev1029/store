@@ -5,9 +5,38 @@
     = stylesheet_link_tag 'application', :media => 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body
-    %div
-      = link_to 'Cart', [:cart]
-      = render :partial => 'items/search_form'
 
-    = yield
+  %body
+    .main_wrapper
+      .header
+        .caption
+          Интернет магазин цифровой техники
+          <span>ХочуКомпьтер.рф</span>
+
+        %ul.menu
+          %li= link_to 'Помощь', '#'
+          %li= link_to 'Доставка', '#'
+          %li= link_to 'Оплата и рассрочка', '#'
+          %li= link_to 'Гарантия', '#'
+          %li= link_to 'Контакты', '#'
+
+      .logo
+        = link_to 'Хочу Компьютер', root_path
+
+      .search
+        = render :partial => 'items/search_form'
+
+      .cart
+        = link_to 'Cart', [:cart]
+
+      .banner
+        %img{ 'src' => 'http://placekitten.com/1000/75' }
+
+      .catalog
+        %h3 Каталог товаров
+        %ul
+          - catalog.children.each do |child|
+            %li= link_to child, child 
+
+      .content
+        = yield

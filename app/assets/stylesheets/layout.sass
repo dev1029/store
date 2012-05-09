@@ -1,0 +1,135 @@
+@import 'compass/reset'
+@import 'compass/css3'
+@import 'compass/utilities'
+
+html
+  body
+    color: #294e95
+    display: block
+    font-family: Calibri, sans-serif
+    font-size: 14px
+    margin: 0 auto
+    width: 1000px
+
+    a
+      color: #294e95
+
+      &:visited
+        color: #294e95
+
+    .main_wrapper
+      +inline-block
+      margin-top: 10px
+
+      .header
+        +clearfix
+        display: block
+        margin-bottom: 10px
+
+        .caption
+          +inline-block
+          float: left
+
+          span
+            +inline-block
+            background: image_url('caption.png') no-repeat
+            text-indent: -9999px
+            width: 149px
+
+        .menu
+          +inline-block
+          float: right
+
+          li
+            border-left: 2px solid #294e95
+            float: left 
+            margin-left: 5px
+            padding-left: 5px
+
+            &:first-child
+              border: none
+
+      .logo
+        +inline-block
+
+        a
+          background: image_url('logo.png') no-repeat
+          border: 1px solid #000
+          display: block
+          height: 53px
+          text-indent: -9999px
+          width: 202px
+
+      .search
+        +inline-block
+        height: 55px
+        margin: 0 10px 0 10px
+        width: 565px
+
+        form
+          .inputs
+            float: left
+
+            #item_search_keywords
+              +border-radius
+              border: 3px solid #2c539e
+              margin-right: 5px
+              outline: none 
+              width: 424px
+
+          .actions
+            +inline-block
+            display: block
+
+            input 
+              +background-image(radial-gradient(#ffb64f, #ff9d23))
+              border: 1px solid #8c8c8c
+              color: #fff
+              height: 24px
+              padding: 1px 0
+              width: 130px
+
+              &:active
+                +background-image(radial-gradient(#ff9d23, #ffb64f))
+
+              &:hover
+                cursor: pointer
+
+
+      .cart
+        +inline-block
+        +background-image(radial-gradient(#ffb64f, #ff9d23))
+        height: 55px
+        width: 202px
+
+      .banner
+        margin: 10px 0
+
+      .catalog
+        +border-radius
+        border: 3px solid #2c539e
+        display: block
+        float: left
+        font-size: 15px
+        margin-right: 10px
+        padding: 5px
+        width: 210px
+
+        h3
+          border-bottom: 1px solid #ff9900
+          color: #000
+          font-weight: bold
+          margin-bottom: 10px
+          padding-bottom: 3px
+          text-align: center
+
+        ul
+          li
+            margin-bottom: 10px
+
+      .content
+        border: 1px dashed #8c8c8c 
+        display: block
+        float: left
+        min-height: 291px
+        width: 762px

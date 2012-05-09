@@ -1,3 +1,37 @@
-%ul
-  - collection.each do |item|
-    %li= link_to item, item
+.top
+  .category.computers
+    %h3= link_to @computers, @computers 
+
+    = image_tag('computers.png')
+
+    %ul
+      - @computers.children.each do |c|
+        %li= link_to c, c 
+
+  .category.notebooks
+    %h3= link_to @notebooks, @notebooks 
+
+    = image_tag('notebooks.png')
+
+    %ul
+      - @notebooks.children.each do |c|
+        %li.floatl= link_to c, c 
+
+.bottom
+  .category.monitors
+    %h3= link_to @monitors, @monitors 
+
+    = image_tag('monitors.png')
+    
+    %ul
+      - @monitors.children.each do |c|
+        %li.floatl= link_to c, c 
+    
+  .category.tablets
+    %h3= link_to @tablets, @tablets
+
+    = image_tag('tablets.png')
+
+    %ul
+      - @tablets.children.each do |c|
+        %li= link_to c, c 

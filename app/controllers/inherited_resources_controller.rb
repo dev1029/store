@@ -5,7 +5,7 @@ class InheritedResourcesController < ApplicationController
 
   has_searcher
 
-  helper_method :cart
+  helper_method :cart, :catalog
 
   protected
     def find_or_create_cart
@@ -18,5 +18,9 @@ class InheritedResourcesController < ApplicationController
 
     def cart
       @cart
+    end
+
+    def catalog
+      @catalog ||= Category.root
     end
 end
