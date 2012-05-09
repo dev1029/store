@@ -1,4 +1,13 @@
-%ul
+%ul.items
   - collection.each do |item|
     %li
-      = link_to item, [item.category, item]
+      %h3= item
+
+      %div
+        = image_tag item.image.thumb('x130').url
+
+      %ul
+        - item.properties.each do |property|
+          %li= property
+
+

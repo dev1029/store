@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class CategoriesController < InheritedResourcesController
-  actions :index, :show
+  actions :index
 
   def index
     index! {
